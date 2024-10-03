@@ -64,7 +64,7 @@ app.get('/get-patients-by-name', (req, res) => {
 
 // Retrieve all providers by their specialty
 app.get('/get-providers-by-specialty', (req, res) => {
-    const getProvidersBySpecialty = "SELECT provider_speciality FROM Providers";
+    const getProvidersBySpecialty = "SELECT provider_specialty FROM Providers";
     db.query(getProvidersBySpecialty, (err, data) => {
         if (err) {
             return res.status(500).send("Failed to get providers");
